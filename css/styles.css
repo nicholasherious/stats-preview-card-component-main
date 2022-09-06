@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+:root {
+  --font-primary: 'Inter', sans-serif;
+  --font-secondary: 'Lexend Deca', sans-serif;
+  --primary-clr-background: hsl(233, 47%, 7%);
+  --primary-clr-card: hsl(244, 38%, 16%);
+  --primary-clr-accent: hsl(277, 64%, 61%);
+
+  --neutral-clr-white: hsl(0, 0%, 100%);
+  --neutral-clr-main-para: hsla(0, 0%, 100%, 0.75);
+  --neutral-clr-stats: hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--primary-clr-background);
+  color: var(--neutral-clr-white);
+}
+
+
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.card {
+  display: flex;
+  flex-direction: row-reverse;
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 80%;
+  
+  
+}
+
+img {
+    width: 100%;
+    height: 100%;
+   
+}
+.images {
+    flex: 100%;
+    position: relative;
+}
+
+.overlay {
+    background-color: var(--primary-clr-accent);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.3;
+}
+
+.content {
+  background-color: var(--primary-clr-card);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 4rem;
+  
+}
+
+.content h1 {
+  font-family: var(--font-primary);
+  font-size: 2.5rem;
+}
+
+.content-info {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-family: var(--font-secondary);
+  color: var(--neutral-clr-stats);
+  font-size: 0.9rem;
+}
+
+.accent {
+  color: var(--primary-clr-accent);
+}
+
+.stats {
+  font-family: var(--font-secondary);
+  display: flex;
+  justify-content: space-between;
+}
+
+.stats p {
+  color: var(--neutral-clr-stats);
+  text-transform: uppercase;
+  font-size: 0.7rem;
+}
+
+.mobile-image {
+  display: none;
+}
+
+@media (max-width: 920px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content-info {
+    margin-bottom: 2rem;
+  }
+
+  .desktop-image {
+    display: none;
+  }
+  .mobile-image {
+    display: block;
+  }
+}
